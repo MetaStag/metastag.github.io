@@ -2,41 +2,38 @@
     /* These variables exist so you can make quick and simple style changes without much CSS knowledge */
 
     /* applies to all areas */
-    --font-family: sans-serif;
-    --font-size: 14px;
+    --font-family: chilanka;
+    --font-size: 15px;
     --line-height: 1.3em;
-    --font-color: black;
+    --background: #47c78b;
+    --bg-color: #afe9ad;
+    --font-color: rgb(46, 53, 52);
     --link-color: #22506A;
     --link-text-decoration: none;
 
     /* main content (between sidebars) */
     --content-padding: 25px;
-    --content-bg-color: #65CAFE;
 
     /* header */
-    --header-height: 150px;
-    --header-background: url('https://pbs.twimg.com/media/EkTRaaMUwAAfh7I?format=jpg&name=large');
-    --header-margin-bottom: 0px;
+    --header-height: 200px;
+    --header-background: url('https://i3.ytimg.com/vi/xwpj9UANXo4/maxresdefault.jpg');
+    --header-margin-bottom: 0px;    
 
     /* sidebar */
     --sidebar-margin: 10px;
-    --sidebar-width: 150px;
+    --sidebar-width: 200px;
     --sidebar-padding: 15px;
-    --sidebar-bg-color: #65CAFE;
 
     /* footer */
-    --footer-height: 30px;
-    --footer-bg-color: #65CAFE;
+    --footer-height: 50px;
 
     /* navbar */
     --navitems-alignment: center;
     --space-between-navitems: 20px;
     --navbar-margin-bottom: 10px;
-    --nav-bg-color: #65CAFE;
 
     /* container */
     --container-width: 800px;
-    --container-bg-color: #3DA2B7;
 
     /* controls the gap between the content and the footer */
     --row-gap: 5px;
@@ -45,14 +42,13 @@
 
     --sidebar-height: 100%;
     --sidebar-overflow: hidden;
-    --background-color: #3DA2B7;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: var(--background);
     font-family: var(--font-family);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -68,7 +64,6 @@ body a {
 #main-container {
     max-width: var(--container-width);
     margin: 0 auto;
-    background-color: var(--container-bg-color);
 }
 
 .flex {
@@ -83,7 +78,7 @@ body a {
 #content-container {
     width: 60%;
     margin-bottom: var(--row-gap);
-    background-color: var(--content-bg-color);
+    background-color: var(--bg-color);
 }
 
 #left-sidebar {
@@ -92,30 +87,14 @@ body a {
     margin-bottom: var(--row-gap);
     height: var(--sidebar-height);
     overflow: var(--sidebar-overflow);
-    background-color: var(--sidebar-bg-color);
-}
-
-#right-sidebar {
-    width: var(--sidebar-width);
-    margin-left: var(--sidebar-margin);
-    margin-bottom: var(--row-gap);
-    height: var(--sidebar-height);
-    overflow: var(--sidebar-overflow);
-    background-color: var(--sidebar-bg-color);
-}
-
-#header-contained {
-    height: var(--header-height);
-    margin-bottom: var(--header-margin-bottom);
-    background-image: var(--header-background);
-    background-position: center center;
+    background-color: var(--bg-color);
 }
 
 #footer {
     height: var(--footer-height);
     text-align: center;
     color: var(--font-color);
-    background-color: var(--footer-bg-color);
+    background-color: var(--bg-color);
 }
 
 #header-full {
@@ -123,15 +102,26 @@ body a {
     height: var(--header-height);
     margin-bottom: var(--header-margin-bottom);
     background-image: var(--header-background);
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
 }
 
 #navbar-contained {
     margin-bottom: var(--row-gap)
 }
 
-#navbar-full {
-    display: none;
+@keyframes float {
+    from {width: 128px; height: 100px;}
+    to {width: 144px; height: 116px;}
+}
+
+#coconut {
+    width: 128px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    animation: float 2s infinite alternate;
 }
 
 .nav {
@@ -141,7 +131,7 @@ body a {
     margin-bottom: var(--navbar-margin-bottom);
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: var(--nav-bg-color);
+    background-color: var(--bg-color);
 }
 
 .nav li {
@@ -191,5 +181,3 @@ body a {
         order: 1;
         margin-bottom: 10px;
     }
-
-}
