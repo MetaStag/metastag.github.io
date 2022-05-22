@@ -75,10 +75,13 @@ body a {
     margin-top: var(--content-margin-top);
 }
 
-#content-container {
+.container {
     width: 60%;
     margin-bottom: var(--row-gap);
     background-color: var(--bg-color);
+    flex-grow: 1;
+    padding: var(--content-padding);
+    padding-top: var(--sidebar-padding);
 }
 
 #left-sidebar {
@@ -124,6 +127,11 @@ body a {
     animation: float 2s infinite alternate;
 }
 
+.meme {
+    max-width: 49%;
+    max-height: 49%;
+}
+
 .nav {
     margin-left: 0;
     text-align: var(--navitems-alignment);
@@ -137,11 +145,6 @@ body a {
 .nav li {
     display: inline-block;
     padding-right: var(--space-between-navitems);
-}
-
-.wrapper {
-    padding: var(--content-padding);
-    padding-top: var(--sidebar-padding);
 }
 
 .sidebar-wrapper {
@@ -181,3 +184,4 @@ body a {
         order: 1;
         margin-bottom: 10px;
     }
+}
